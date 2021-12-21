@@ -1,0 +1,30 @@
+.details {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    place-items: center;
+    @media (max-width: 650px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    img {
+        border-radius: 5%;
+        height: auto;
+        width: auto;
+        max-width: 290px;
+        max-height: 290px;
+        opacity: .8;
+        box-shadow: 0 0 10px -2px #ffffff;      
+        &:hover {
+            box-shadow: 0 0 10px -2.5px #ffffff;           
+            transform: scale(99.5%);
+        }
+    }
+
+    h3 {
+        line-height: 1.6;
+        padding-top: 0;
+        font-size: 18px;
+    }
+}

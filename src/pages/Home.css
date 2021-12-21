@@ -1,0 +1,138 @@
+.home-container {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-container {
+  position: relative;
+  margin-top: -220px;
+  width: 100%;
+  text-align: center;
+}
+
+.text-container h1.line-1 {
+  font-size: auto;
+  padding-bottom: 0.5em;
+}
+
+.text-container .line-1 {
+  margin: 0;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #095fab), color-stop(50%, #e8eb3e), color-stop(60%, #fff));
+  background: linear-gradient(to right, #095fab 10%, #e8eb3e 50%, #fff 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: auto;
+  opacity: 1;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (max-width: 650px) {
+  .text-container .line-1 {
+    font-size: 20px;
+  }
+}
+
+.text-container .a {
+  -webkit-animation: blinkTextCursor 500ms steps(30) 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(30) 1s 1 normal both;
+          animation: blinkTextCursor 500ms steps(30) 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(30) 1s 1 normal both;
+}
+
+.text-container .b {
+  -webkit-animation: blinkTextCursor 500ms steps(35) 3s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 3s 1 normal both;
+          animation: blinkTextCursor 500ms steps(35) 3s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 3s 1 normal both;
+}
+
+.text-container .c {
+  -webkit-animation: blinkTextCursor 500ms steps(35) 5s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 5s 1 normal both;
+          animation: blinkTextCursor 500ms steps(35) 5s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 5s 1 normal both;
+}
+
+.text-container .d {
+  -webkit-animation: blinkTextCursor 500ms steps(35) 7s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 7s 1 normal both;
+          animation: blinkTextCursor 500ms steps(35) 7s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 7s 1 normal both;
+}
+
+.text-container .e {
+  -webkit-animation: blinkTextCursor 500ms steps(35) 9s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 9s 1 normal both;
+          animation: blinkTextCursor 500ms steps(35) 9s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 9s 1 normal both;
+}
+
+.text-container .f {
+  -webkit-animation: blinkTextCursor 500ms steps(35) 12s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 12s 1 normal both;
+          animation: blinkTextCursor 500ms steps(35) 12s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 12s 1 normal both;
+}
+
+.text-container .g {
+  -webkit-animation: blinkTextCursor 500ms steps(35) 14s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 14s 1 normal both;
+          animation: blinkTextCursor 500ms steps(35) 14s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 14s 1 normal both;
+}
+
+@-webkit-keyframes textclip {
+  from {
+    background-position: 200% center;
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textclip {
+  from {
+    background-position: 200% center;
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    border: none;
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    border: none;
+  }
+}
+
+@-webkit-keyframes blinkTextCursor {
+  from {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

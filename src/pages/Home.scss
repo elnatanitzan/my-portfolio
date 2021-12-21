@@ -1,0 +1,108 @@
+.home-container {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.text-container {
+    position: relative;
+    margin-top: -220px;
+    width: 100%;
+    text-align: center;
+    
+    h1.line-1 {
+      font-size: auto;
+      padding-bottom: 0.5em;
+    }
+    .line-1 {
+        margin: 0;
+        background: linear-gradient(
+            to right,
+            #095fab 10%,
+            #e8eb3e 50%,
+            #fff 60%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: auto;
+        @media (max-width: 650px) {   
+            font-size: 20px;
+        }
+        opacity: 1;
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .a {
+      animation: blinkTextCursor 500ms steps(30) 12 normal,
+                  textclip 7s 15s linear infinite,
+                  typewriter 4s steps(30) 1s 1 normal both;
+    }
+    .b {
+      animation: blinkTextCursor 500ms steps(35) 3s 12 normal,
+                  textclip 7s 15s linear infinite,
+                  typewriter 4s steps(35) 3s 1 normal both;
+    }
+    .c {
+      animation: blinkTextCursor 500ms steps(35) 5s 12 normal,
+                  textclip 7s 15s linear infinite,
+                  typewriter 4s steps(35) 5s 1 normal both;
+    }
+    .d {
+      animation: blinkTextCursor 500ms steps(35) 7s 12 normal,
+                  textclip 7s 15s linear infinite,
+                  typewriter 4s steps(35) 7s 1 normal both;
+    }
+    .e {
+      animation: blinkTextCursor 500ms steps(35) 9s 12 normal,
+                  textclip 7s 15s linear infinite,
+                  typewriter 4s steps(35) 9s 1 normal both;
+    }
+    .f {
+      animation: blinkTextCursor 500ms steps(35) 12s 12 normal,
+                  textclip 7s 15s linear infinite,    
+                  typewriter 4s steps(35) 12s 1 normal both;
+    }
+    .g {
+      animation: blinkTextCursor 500ms steps(35) 14s 12 normal,
+                  textclip 7s 15s linear infinite,
+                  typewriter 4s steps(35) 14s 1 normal both;
+    }
+
+    
+        
+}
+
+@keyframes textclip {
+from {
+  background-position: 200% center;
+  opacity: 1;
+}
+to {
+  opacity: 1;
+}
+}
+
+@keyframes typewriter {
+from {
+  width: 0;
+}
+to {
+  width: 100%;
+  border: none;
+}
+}
+
+@keyframes blinkTextCursor {
+from {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+}
+to {
+  border-right-color: transparent;
+}
+}
