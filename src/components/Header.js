@@ -41,6 +41,7 @@ const Header = ({ history }) => {
                             <HomeIcon />
                         </Link>
                     </div>
+                    {/* <h3>My Portfolio</h3> */}
                     <div onClick={handleMenu} style={{pointerEvents: disabled ? "none" : "initial"}}>
                         <MenuAnimatedIcon className={ clicked ? 'active' : '' } />
                     </div>

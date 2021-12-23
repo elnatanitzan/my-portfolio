@@ -1,9 +1,16 @@
 .Carousel {
-  width: 100%;
+  width: 80%;
   height: 100vh;
   margin: 0 auto;
   -webkit-transform: translateY(-7%);
           transform: translateY(-7%);
   overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 380px) {
+  .Carousel {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=Portfolio.css.map */

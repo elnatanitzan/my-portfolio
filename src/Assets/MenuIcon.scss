@@ -5,11 +5,10 @@ svg {
     outline: none;
 }
 
-#home {
+#home, #github, #open, #codepen {
     transition: .3s ease;
     &:hover {
         transform: scale(1.1);
-        transition: .3s ease;
     }
 }
 

@@ -3,60 +3,82 @@ import styled from 'styled-components';
 import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
 import { Cards } from '../components/ProjectList';
+import { ReactComponent as GithubIcon } from '../Assets/github.svg';
+import { ReactComponent as OpenIcon } from '../Assets/open.svg';
+import { ReactComponent as CodepenIcon } from '../Assets/codepen.svg';
 
 import './Portfolio.css';
 
 const Card = styled.div`
-    heigth: 700px;
-    width: 700px;
-    @media (max-width: 400px) {
-        width: 310px;
-    }
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-grow: 2;
     background: #252525;
-    border-radius: 8px 8px 2px 2px;
+    border-radius: 8px 8px 4px 4px;
     z-index: 11;
     text-align: center;
     overflow: hidden;
-    position: relative;
-`;
-
-const Img = styled.img`
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    @media (max-width: 400px) {
-        max-width: 310px;
+    transition: transform .2s linear;
+    &:hover {
+        transform: scale(102%);
     }
 `;
 
-const slides = [...Cards].map((card) => ({
-    key: card.title,
-    content: <Card key={card.title}>
-                    <Img src={card.src}  alt={card.title} />
-                    <h2>{card.title}</h2>
-                    <h4>{card.details}</h4>
-             </Card>, 
-}));
+const CardImg = styled.div`
+@media (max-width: 380px) {
+        width: 310px;
+}
+`;
+
+const Img = styled.img`
+    object-fit: contain;
+    display: block;
+    width: 100%;
+`;
+
+const ButtonsContainer = styled.div`
+    border-radius: 0 2px 8px 0;
+    position: fixed;
+    display: grid;
+    gap: 10px;
+    padding: 5px;
+    background: #20202060;
+    backdrop-filter: blur(1px);
+`;
+
+const Text = styled.div`
+    padding: 0 20px;
+    heigth: fit-content;
+`;
+
 
 export default function Porfolio() {
+    const [goToSlide, setGoToSlide] = useState(0);
+    const slides = [...Cards].map((card, i) => ({
+        key: card.title,
+        content: <Card key={card.title} >
+                        <CardImg>
+                            <ButtonsContainer>
+                                <a href={card.demoLink} target="blank"><OpenIcon/></a>
+                                { card.githubLink.length > 0 &&
+                                    <a href={card.githubLink} target="blank"><GithubIcon/></a> }
+                                { card.codepenLink.length > 0 &&
+                                    <a href={card.codepenLink} target="blank"><CodepenIcon/></a> }
+                            </ButtonsContainer>
+                            <Img src={card.src} alt="1" />
+                        </CardImg>
+                        { i === goToSlide &&
+                        <Text>
+                            <h2>{card.title}</h2>
+                            <h4>{card.details}</h4>
+                        </Text>}
+                 </Card>, 
+    }));
 
-    const [offsetRadius, setOffsetRadius] = useState(2);
-    const [showArrows, setShowArrows] = useState(true);
-    const [goToSlide, setGoToSlide] = useState(null);
-    const table = slides.map((element, index) => {
-        return { ...element, onClick: () => setGoToSlide(index) };
+    const table = slides.map((element, i) => {
+        return { ...element, onClick: () => {setGoToSlide(i) }};
     });
-    const [cards] = useState(table);
     
-    useEffect(() => {
-        setOffsetRadius(offsetRadius);
-        setShowArrows(showArrows);
-    }, [offsetRadius, showArrows]);
-
     let xDown = null;
     let yDown = null;
 
@@ -65,6 +87,12 @@ export default function Porfolio() {
         e.touches || e.originalEvent.touches // browser API
         ); // jQuery
     };
+
+    useEffect(() => {
+        console.log(Math.abs(goToSlide));
+        
+
+    }, [goToSlide, slides])
 
     const handleTouchStart = (e) => {
         const firstTouch = getTouches(e)[0];
@@ -90,13 +118,7 @@ export default function Porfolio() {
             setGoToSlide(goToSlide + 1);
         } else {
             /* right swipe */
-            setGoToSlide(goToSlide - 1);
-        }
-        } else {
-        if (yDiff > 0) {
-            /* up swipe */
-        } else {
-            /* down swipe */
+            goToSlide === 0 ? setGoToSlide(slides.length-1) : setGoToSlide(goToSlide - 1);
         }
         }
         /* reset values */
@@ -111,10 +133,10 @@ export default function Porfolio() {
             onTouchMove={handleTouchMove}
         >
             <Carousel
-                slides={cards}
+                slides={table}
                 goToSlide={goToSlide}
-                goToSlideDelay={100}
-                offsetRadius={offsetRadius}
+                goToSlideDelay={200}
+                offsetRadius={2}
                 showNavigation={false}
                 animationConfig={config.gentle}
             />
