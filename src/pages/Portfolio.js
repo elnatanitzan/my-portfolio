@@ -34,9 +34,12 @@ const CardImg = styled.div`
 `;
 
 const Img = styled.img`
-    object-fit: contain;
-    display: block;
-    width: 100%;
+object-fit: contain;
+display: block;
+width: 100%;
+@media (max-width: 380px) {
+        width: 330px;
+}
 `;
 
 const ButtonsContainer = styled.div`
