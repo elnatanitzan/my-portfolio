@@ -76,7 +76,7 @@ a:hover {
 
 .text-container {
   position: relative;
-  margin-top: -220px;
+  margin-top: -130px;
   width: 100%;
   text-align: center;
 }
@@ -90,7 +90,7 @@ a:hover {
 }
 
 .text-container h3 {
-  width: 70%;
+  width: 80%;
   line-height: 2;
   -webkit-animation: textclip 7s 2s linear infinite;
           animation: textclip 7s 2s linear infinite;
@@ -139,25 +139,25 @@ a:hover {
 }
 
 .buttons #github {
-  fill: #cf57f0;
+  fill: #cf57f073;
   height: 55px;
   width: 55px;
 }
 
 .buttons #codepen {
-  fill: #fcc653;
+  fill: #fcc65373;
   height: 57px;
   width: 57px;
 }
 
 .buttons #facebook {
-  fill: #f74949;
+  fill: #f7494975;
   height: 60px;
   width: 60px;
 }
 
 .buttons #linkedin {
-  fill: #2abd4a;
+  fill: #2abd4a70;
   height: 50px;
   width: 50px;
 }

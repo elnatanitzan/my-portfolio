@@ -8,7 +8,7 @@
 }
 .text-container {
   position: relative;
-  margin-top: -220px;
+  margin-top: -130px;
   width: 100%;
   text-align: center;
   
@@ -21,7 +21,7 @@
   }
 
   h3 {
-    width: 70%;
+    width: 80%;
     line-height: 2;
     animation: textclip 7s 2s linear infinite;
   }
@@ -64,22 +64,22 @@
   margin-top: 20px;
   
   #github {
-    fill: $pink;
+    fill: #cf57f073;
     height: 55px;
     width: 55px;
   }
   #codepen {
-    fill: $yellow;
+    fill: #fcc65373;
     height: 57px;
     width: 57px;
   }
   #facebook {
-    fill: $red;
+    fill: #f7494975;
     height: 60px;
     width: 60px;
   }
   #linkedin {
-    fill: $green;
+    fill: #2abd4a70;
     height: 50px;
     width: 50px;
 

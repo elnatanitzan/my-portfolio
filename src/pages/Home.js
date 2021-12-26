@@ -17,9 +17,11 @@ export default function Home() {
                     <br/>
                     <h3 className="line-1">
                         I am Front-End junior developer.
+                        <br/>
                         Recently I studied client side
                         development technologies,
                         especially Angular and ReactJS.
+                        <br/>
                         I can provide clean code
                         and pixel perfect design.
                     </h3>
