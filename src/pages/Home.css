@@ -90,6 +90,8 @@ a:hover {
 }
 
 .text-container h3 {
+  width: 70%;
+  line-height: 2;
   -webkit-animation: textclip 7s 2s linear infinite;
           animation: textclip 7s 2s linear infinite;
 }
@@ -112,7 +114,7 @@ a:hover {
 
 @media (max-width: 650px) {
   .text-container .line-1 {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 
@@ -138,22 +140,29 @@ a:hover {
 
 .buttons #github {
   fill: #cf57f0;
+  height: 55px;
+  width: 55px;
 }
 
 .buttons #codepen {
   fill: #fcc653;
+  height: 57px;
+  width: 57px;
 }
 
 .buttons #facebook {
   fill: #f74949;
+  height: 60px;
+  width: 60px;
 }
 
-.buttons #github, .buttons #codepen, .buttons #facebook {
+.buttons #linkedin {
+  fill: #2abd4a;
   height: 50px;
   width: 50px;
 }
 
-.buttons #github:hover, .buttons #codepen:hover, .buttons #facebook:hover {
+.buttons #github:hover, .buttons #codepen:hover, .buttons #facebook:hover, .buttons #linkedin:hover {
   fill: #fff;
 }
 

@@ -1,5 +1,5 @@
-
-h1 { text-align: center; }
+@import '../App.scss';
+// h1 { text-align: center; }
 
 .details {
     height: 100%;
@@ -11,14 +11,16 @@ h1 { text-align: center; }
         grid-template-columns: 1fr;
         gap: 0;
     }
+    
     img {
         border-radius: 5%;
         height: auto;
         width: auto;
-        max-width: 290px;
-        max-height: 290px;
+        max-width: 270px;
+        max-height: 270px;
         opacity: .8;
-        box-shadow: 0 0 10px -2px #ffffff;      
+        box-shadow: 0 0 10px -2px #ffffff;
+
         &:hover {
             box-shadow: 0 0 10px -2.5px #ffffff;           
             transform: scale(99.5%);
@@ -26,7 +28,20 @@ h1 { text-align: center; }
     }
 
     h3 {
-        line-height: 1.6;
+        background: linear-gradient(
+          to right,
+          $pink 10%,
+          $yellow 50%,
+          $red 60%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+        line-height: 1.9;
         padding-top: 0;
         font-size: 18px;
     }

@@ -197,15 +197,20 @@ header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  text-align: center;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li a:nth-child(2n) {
+  color: #cf57f0;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li a {
+  width: 100%;
 }
 
 header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li:hover {
   border-radius: 8px;
   background: rgba(26, 26, 26, 0.384);
-}
-
-header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li:hover a {
-  color: #fcc653;
 }
 
 header .hamburger-menu .menu-layer .wrapper .projects {

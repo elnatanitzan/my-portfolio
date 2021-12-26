@@ -89,7 +89,8 @@ header {
                         ul {
                             margin: 0;
                             padding: 0;
-    
+                            
+                            
                             li {
                                 list-style: none;
                                 font-size: 3rem;
@@ -99,12 +100,16 @@ header {
                                 position: relative;
                                 display: grid;
                                 place-items: center;
+                                text-align: center;
+                                a:nth-child(2n) { color: $pink; }
+                                a {
+                                    width: 100%;
+                                
+                                }
+                                
                                 &:hover {
                                     border-radius: 8px;
-                                    background: rgba(26, 26, 26, 0.384);
-                                    a {
-                                        color: $yellow;
-                                    }
+                                    background: rgba(26, 26, 26, 0.384);                                   
                                 }
     
                             }

@@ -3,6 +3,7 @@ import './Home.css';
 import { ReactComponent as GithubIcon } from '../Assets/github.svg';
 import { ReactComponent as CodepenIcon } from '../Assets/codepen.svg';
 import { ReactComponent as FacebookIcon } from '../Assets/facebook.svg';
+import { ReactComponent as LinkedInIcon } from '../Assets/linkedin.svg';
 
 export default function Home() {
 
@@ -27,6 +28,7 @@ export default function Home() {
                     <a href="https://github.com/elnatanitzan" target="blank"><GithubIcon/></a>
                     <a href="https://codepen.io/elnatanitzan" target="blank"><CodepenIcon/></a>
                     <a href="https://www.facebook.com/profile.php?id=100021684150138" target="blank"><FacebookIcon/></a>
+                    <a href="https://www.linkedin.com/in/elnatanitzan/" target="blank"><LinkedInIcon/></a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&family=Rubik:wght@300;400;600&display=swap");
+html,
+body {
+  height: 100vw;
+  padding: 0;
+  margin: 0;
+  background: #141414;
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
 h1 {
-  text-align: center;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #494949;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .wrapper {
+  height: 100%;
+  padding: 0 65px;
+}
+
+@media (max-width: 650px) {
+  .container .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.container .wrapper .home {
+  height: 100%;
+  width: 100%;
+}
+
+.container .wrapper .home p {
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .details {
@@ -24,8 +86,8 @@ h1 {
   border-radius: 5%;
   height: auto;
   width: auto;
-  max-width: 290px;
-  max-height: 290px;
+  max-width: 270px;
+  max-height: 270px;
   opacity: .8;
   -webkit-box-shadow: 0 0 10px -2px #ffffff;
           box-shadow: 0 0 10px -2px #ffffff;
@@ -39,7 +101,16 @@ h1 {
 }
 
 .details h3 {
-  line-height: 1.6;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #cf57f0), color-stop(50%, #fcc653), color-stop(60%, #f74949));
+  background: linear-gradient(to right, #cf57f0 10%, #fcc653 50%, #f74949 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  line-height: 1.9;
   padding-top: 0;
   font-size: 18px;
 }

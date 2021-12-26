@@ -5,12 +5,12 @@ svg {
   outline: none;
 }
 
-#home, #github, #open, #codepen, #facebook {
+#home, #github, #open, #codepen, #facebook, #linkedin {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-#home:hover, #github:hover, #open:hover, #codepen:hover, #facebook:hover {
+#home:hover, #github:hover, #open:hover, #codepen:hover, #facebook:hover, #linkedin:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

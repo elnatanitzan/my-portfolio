@@ -21,6 +21,8 @@
   }
 
   h3 {
+    width: 70%;
+    line-height: 2;
     animation: textclip 7s 2s linear infinite;
   }
   .line-1 {
@@ -38,7 +40,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       @media (max-width: 650px) {   
-          font-size: 25px;
+          font-size: 22px;
       }
       opacity: 1;
       position: relative;
@@ -61,14 +63,30 @@
   gap: 10px;
   margin-top: 20px;
   
-  #github { fill: $pink; }
-  #codepen { fill: $yellow; }
-  #facebook { fill: $red; }
-  
-  #github, #codepen, #facebook{
+  #github {
+    fill: $pink;
+    height: 55px;
+    width: 55px;
+  }
+  #codepen {
+    fill: $yellow;
+    height: 57px;
+    width: 57px;
+  }
+  #facebook {
+    fill: $red;
+    height: 60px;
+    width: 60px;
+  }
+  #linkedin {
+    fill: $green;
     height: 50px;
     width: 50px;
 
+  }
+  
+  #github, #codepen, #facebook, #linkedin {
+    
     &:hover {
       fill: #fff;
     }
