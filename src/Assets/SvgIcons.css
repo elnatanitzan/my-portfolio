@@ -5,18 +5,14 @@ svg {
   outline: none;
 }
 
-#home, #github, #open, #codepen {
+#home, #github, #open, #codepen, #facebook {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-#home:hover, #github:hover, #open:hover, #codepen:hover {
+#home:hover, #github:hover, #open:hover, #codepen:hover, #facebook:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-#github, #open, #codepen {
-  fill: #fdcf00;
 }
 
 #menu {
@@ -101,4 +97,4 @@ path:nth-child(6) {
   -webkit-transform: translateX(9px) translateY(1px) rotate(45deg);
           transform: translateX(9px) translateY(1px) rotate(45deg);
 }
-/*# sourceMappingURL=MenuIcon.css.map */
+/*# sourceMappingURL=SvgIcons.css.map */

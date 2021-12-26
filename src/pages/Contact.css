@@ -1,0 +1,68 @@
+.contact {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "a b" "c c";
+  gap: 20px;
+}
+
+.contact .li1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+
+.contact .li2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: b;
+}
+
+.contact .li3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: c;
+}
+
+@media (max-width: 450px) {
+  .contact {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "a" "b" "c";
+    gap: 30px;
+    margin-top: 30px;
+  }
+}
+
+.contact li {
+  padding: 10px;
+  width: 100%;
+  background: #2c2c2c81;
+  -webkit-box-shadow: 0 0 6px #66666691;
+          box-shadow: 0 0 6px #66666691;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.contact li h4 {
+  color: #adadad;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #adadad;
+}
+
+.contact li .map {
+  margin-top: 10px;
+}
+/*# sourceMappingURL=Contact.css.map */

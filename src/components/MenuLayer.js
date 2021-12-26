@@ -6,33 +6,32 @@ import {
     staggerText,
     staggerReveal,
     fadeInUp,
-    handleHover,
-    handleHoverExit,
-    handleCityReturn,
-    handleCity,
+    handleImageReturn,
+    handleImage,
     staggerRevealClose
   } from "./Animations";
 
-import dallas from "../images/dallas.webp";
-import austin from "../images/austin.webp";
-import newyork from "../images/newyork.webp";
-import sanfrancisco from "../images/sanfrancisco.webp";
-import beijing from "../images/beijing.webp";
+import ApiExplorer from "../project-photos/Angular-Api-explorer.png";
+import CookBook from "../project-photos/Cook-Book-Hooks-Api-Server.png";
+import ReactMemoryGame from "../project-photos/React-Memory-Game.png";
+import TodoAppReactFirebase from "../project-photos/TodoApp-React-Firebase.png";
+import SetButtonsSASS from "../project-photos/set-Buttons-use-SASS-@mixin.png";
 
-const cities = [
-  { name: "Dallas", image: dallas },
-  { name: "Austin", image: austin },
-  { name: "New York", image: newyork },
-  { name: "San Francisco", image: sanfrancisco },
-  { name: "Beijing", image: beijing }
+
+const images = [
+  { name: "Api-Explorer", image: ApiExplorer },
+  { name: "CookBook", image: CookBook },
+  { name: "MemoryGame", image: ReactMemoryGame },
+  { name: "TodoApp", image: TodoAppReactFirebase },
+  { name: "SetButtons", image: SetButtonsSASS }
 ];
 
-const Hamb = ({ initial, clicked }) => {
+const MenuLayer = ({ initial, clicked }) => {
     // Create varibles of our dom nodes
     let menuLayer = useRef(null);
     let reveal1 = useRef(null);
     let reveal2 = useRef(null);
-    let cityBackground = useRef(null);
+    let imageBackground = useRef(null);
     let line1 = useRef(null);
     let line2 = useRef(null);
     let line3 = useRef(null);
@@ -72,8 +71,8 @@ const Hamb = ({ initial, clicked }) => {
           </div>
           <div ref={el => (reveal2 = el)} className='menu-layer'>
             <div
-              ref={el => (cityBackground = el)}
-              className='menu-city-background'>
+              ref={el => (imageBackground = el)}
+              className='menu-image-background'>
             </div>
             <div className='container'>
               <div className='wrapper'>
@@ -82,8 +81,6 @@ const Hamb = ({ initial, clicked }) => {
                     <ul>
                       <li>
                         <Link
-                          onMouseEnter={e => handleHover(e)}
-                          onMouseOut={e => handleHoverExit(e)}
                           ref={el => (line1 = el)}
                           to='/about'>
                           About
@@ -91,8 +88,6 @@ const Hamb = ({ initial, clicked }) => {
                       </li>
                       <li>
                         <Link
-                          onMouseEnter={e => handleHover(e)}
-                          onMouseOut={e => handleHoverExit(e)}
                           ref={el => (line2 = el)}
                           to='/portfolio'>
                           Porfolio
@@ -100,8 +95,6 @@ const Hamb = ({ initial, clicked }) => {
                       </li>
                       <li>
                         <Link
-                          onMouseEnter={e => handleHover(e)}
-                          onMouseOut={e => handleHoverExit(e)}
                           ref={el => (line3 = el)}
                           to='/contact'>
                           Contact
@@ -110,22 +103,17 @@ const Hamb = ({ initial, clicked }) => {
                     </ul>
                   </nav>
                   <div ref={el => (info = el)} className='info'>
-                    <h3>Our Promise</h3>
-                    <p>
-                      The passage experienced a surge in popularity during the 1960s
-                      when Letraset used it on their dry-transfer sheets, and again
-                      during the 90s as desktop publishers bundled the text with
-                      their software.
-                    </p>
+                    
                   </div>
-                  <div className='locations'>
-                    Locations:
-                    {/* Returning the list of cities */}
-                    {cities.map(el => (
+                  <div className='projects'>
+                    <span>Projects:</span>
+                    {/* Returning the list of images */}
+                    {images.map(el => (
                       <span
+                        className="menu-images"
                         key={el.name}
-                        onMouseEnter={() => handleCity(el.image, cityBackground)}
-                        onMouseOut={() => handleCityReturn(cityBackground)}>
+                        onMouseEnter={() => handleImage(el.image, imageBackground)}
+                        onMouseOut={() => handleImageReturn(imageBackground)}>
                         {el.name}
                       </span>
                     ))}
@@ -138,4 +126,4 @@ const Hamb = ({ initial, clicked }) => {
       );
 };
 
-export default Hamb;
+export default MenuLayer;

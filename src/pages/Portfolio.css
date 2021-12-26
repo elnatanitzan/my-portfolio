@@ -1,3 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&family=Rubik:wght@300;400;600&display=swap");
+html,
+body {
+  height: 100vw;
+  padding: 0;
+  margin: 0;
+  background: #141414;
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #494949;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .wrapper {
+  height: 100%;
+  padding: 0 65px;
+}
+
+@media (max-width: 650px) {
+  .container .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.container .wrapper .home {
+  height: 100%;
+  width: 100%;
+}
+
+.container .wrapper .home p {
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .Carousel {
   width: 80%;
   height: 100vh;
@@ -12,5 +78,9 @@
   .Carousel {
     width: 100%;
   }
+}
+
+.Carousel #github, .Carousel #open, .Carousel #codepen, .Carousel #facebook {
+  fill: #fcc653;
 }
 /*# sourceMappingURL=Portfolio.css.map */

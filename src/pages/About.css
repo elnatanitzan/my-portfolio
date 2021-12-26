@@ -1,4 +1,9 @@
+h1 {
+  text-align: center;
+}
+
 .details {
+  height: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 300px 1fr;

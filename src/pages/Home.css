@@ -1,4 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&family=Rubik:wght@300;400;600&display=swap");
+html,
+body {
+  height: 100vw;
+  padding: 0;
+  margin: 0;
+  background: #141414;
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #494949;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .wrapper {
+  height: 100%;
+  padding: 0 65px;
+}
+
+@media (max-width: 650px) {
+  .container .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.container .wrapper .home {
+  height: 100%;
+  width: 100%;
+}
+
+.container .wrapper .home p {
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .home-container {
+  width: 100%;
   height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -17,65 +84,77 @@
 .text-container h1.line-1 {
   font-size: auto;
   padding-bottom: 0.5em;
+  display: inline-block;
+  white-space: nowrap;
+  opacity: 1;
+}
+
+.text-container h3 {
+  -webkit-animation: textclip 7s 2s linear infinite;
+          animation: textclip 7s 2s linear infinite;
 }
 
 .text-container .line-1 {
   margin: 0;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #095fab), color-stop(50%, #e8eb3e), color-stop(60%, #fff));
-  background: linear-gradient(to right, #095fab 10%, #e8eb3e 50%, #fff 60%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #cf57f0), color-stop(50%, #fcc653), color-stop(60%, #f74949));
+  background: linear-gradient(to right, #cf57f0 10%, #fcc653 50%, #f74949 60%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: auto;
   opacity: 1;
   position: relative;
   display: inline-block;
-  white-space: nowrap;
   overflow: hidden;
 }
 
 @media (max-width: 650px) {
   .text-container .line-1 {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
-.text-container .a {
-  -webkit-animation: blinkTextCursor 500ms steps(30) 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(30) 1s 1 normal both;
-          animation: blinkTextCursor 500ms steps(30) 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(30) 1s 1 normal both;
+.text-container .anim-typewriter {
+  -webkit-animation: blinkTextCursor 500ms steps(30) 30 normal, typewriter 3s steps(30) 1 normal both;
+          animation: blinkTextCursor 500ms steps(30) 30 normal, typewriter 3s steps(30) 1 normal both;
 }
 
-.text-container .b {
-  -webkit-animation: blinkTextCursor 500ms steps(35) 3s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 3s 1 normal both;
-          animation: blinkTextCursor 500ms steps(35) 3s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 3s 1 normal both;
+.buttons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.text-container .c {
-  -webkit-animation: blinkTextCursor 500ms steps(35) 5s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 5s 1 normal both;
-          animation: blinkTextCursor 500ms steps(35) 5s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 5s 1 normal both;
+.buttons #github {
+  fill: #cf57f0;
 }
 
-.text-container .d {
-  -webkit-animation: blinkTextCursor 500ms steps(35) 7s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 7s 1 normal both;
-          animation: blinkTextCursor 500ms steps(35) 7s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 7s 1 normal both;
+.buttons #codepen {
+  fill: #fcc653;
 }
 
-.text-container .e {
-  -webkit-animation: blinkTextCursor 500ms steps(35) 9s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 9s 1 normal both;
-          animation: blinkTextCursor 500ms steps(35) 9s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 9s 1 normal both;
+.buttons #facebook {
+  fill: #f74949;
 }
 
-.text-container .f {
-  -webkit-animation: blinkTextCursor 500ms steps(35) 12s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 12s 1 normal both;
-          animation: blinkTextCursor 500ms steps(35) 12s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 12s 1 normal both;
+.buttons #github, .buttons #codepen, .buttons #facebook {
+  height: 50px;
+  width: 50px;
 }
 
-.text-container .g {
-  -webkit-animation: blinkTextCursor 500ms steps(35) 14s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 14s 1 normal both;
-          animation: blinkTextCursor 500ms steps(35) 14s 12 normal, textclip 7s 15s linear infinite, typewriter 4s steps(35) 14s 1 normal both;
+.buttons #github:hover, .buttons #codepen:hover, .buttons #facebook:hover {
+  fill: #fff;
 }
 
 @-webkit-keyframes textclip {

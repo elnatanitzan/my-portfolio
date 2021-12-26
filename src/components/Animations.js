@@ -50,35 +50,15 @@ export const fadeInUp = node => {
   });
 };
 
-// Hover on the link
-export const handleHover = e => {
-  gsap.to(e.target, {
-    duration: 0.3,
-    y: 3,
-    skewX: 4,
-    ease: "power1.inOut"
-  });
-};
-
-// Hover off the link
-export const handleHoverExit = e => {
-  gsap.to(e.target, {
-    duration: 0.3,
-    y: -3,
-    skewX: 0,
-    ease: "power1.inOut"
-  });
-};
-
 // adds city image once you hover on
-export const handleCity = (city, target) => {
+export const handleImage = (image, target) => {
   gsap.to(target, {
     duration: 0,
-    background: `url(${city}) center center`
+    background: `url(${image}) center center`
   });
   gsap.to(target, {
     duration: 0.4,
-    opacity: 1,
+    opacity: .5,
     ease: "power3.inOut"
   });
   gsap.from(target, {
@@ -89,7 +69,7 @@ export const handleCity = (city, target) => {
 };
 
 // Removes the city image once you hover off
-export const handleCityReturn = target => {
+export const handleImageReturn = target => {
   gsap.to(target, {
     duration: 0,
     skewY: 0

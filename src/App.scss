@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&family=Rubik:wght@300;400;600&display=swap');
 
-$menu: #136899;
-$black: #191919;
+// colors:
+$pink: #cf57f0;
+$yellow: #fcc653;
+$red: #f74949;
 
 html,
 body {
@@ -14,12 +16,19 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-
-
 h1 { font-weight: 500; }
 h2 { font-weight: 400; }
 h3 { font-weight: 400; }
 h4 { font-weight: 300; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    color: #494949;
+  }
+}
 
 .container {
   height: 100%;
@@ -44,184 +53,5 @@ h4 { font-weight: 300; }
         font-weight: 500;
       }
     }
-  }
-}
-
-header {
-  position: relative;
-  height: 80px;
-  
-  
-  .inner-header {
-    background: #20202060;
-    backdrop-filter: blur(8px);
-    box-shadow: 10px 0 5px #3838387e; 
-    overflow: hidden;
-    position: absolute;
-    padding: 0 65px;
-    @media (max-width: 650px) {
-      padding: 0 25px;
-    }
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-  }
-
-  .hamburger-menu {
-    display: none;
-    z-index: 9;
-    top: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-
-    .menu-secondary-background-color {
-      background: $black;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-    }
-
-    .menu-layer {
-      position: relative;
-      background: $menu;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-
-      .menu-city-background {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation-name: backgroundEffect;
-        animation-duration: 30s;
-        animation-iteration-count: infinite;
-      }
-
-      .wrapper {
-        position: relative;
-
-        .menu-links {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          position: relative;
-          top: 150px;
-
-          @media screen and (max-width: 800px) {
-            flex-direction: column;
-          }
-
-          nav {
-            display: block;
-
-            ul {
-              margin: 0;
-              padding: 0;
-
-              li {
-                list-style: none;
-                font-size: 3rem;
-                font-weight: 500;
-                cursor: pointer;
-                height: 135px;
-                // overflow: hidden;
-                position: relative;
-                width: auto;
-
-                a {
-                  // position: absolute;
-                  color: #fff;
-                  text-decoration: none;
-
-                  &:hover {
-                    color: $black;
-                  }
-                }
-              }
-            }
-          }
-
-          .info {
-            color: #fff;
-            width: 300px;
-
-            h3 {
-              font-size: 1.2rem;
-              margin: 8px auto;
-            }
-
-            p {
-              margin: 0 auto;
-              font-size: 0.8rem;
-            }
-          }
-        }
-
-        .locations {
-          position: absolute;
-          bottom: -80px;
-          color: #fff;
-          margin-top: 16px;
-          font-size: 0.8rem;
-          font-weight: 600;
-
-          span {
-            cursor: pointer;
-
-            &:first-child {
-              margin-left: 64px;
-            }
-
-            font-weight: 400;
-            margin: 0 32px;
-            transition: 0.3s ease-in-out;
-
-            &:hover {
-              color: #fff;
-              background: $black;
-              padding: 8px 24px;
-              border-radius: 4px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@keyframes backgroundEffect {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 40% 10%;
-  }
-  50% {
-    background-position: 0 10%;
-  }
-  75% {
-    background-position: 10% 40%;
-  }
-  100% {
-    background-position: 0% 0%;
   }
 }

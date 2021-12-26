@@ -1,0 +1,45 @@
+
+.contact {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    user-select: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "a b"
+                         "c c";
+    gap: 20px;
+
+    .li1 { grid-area: a }
+    .li2 { grid-area: b }
+    .li3 { grid-area: c }
+
+    @media (max-width: 450px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "a" "b" "c";
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+    li {
+        padding: 10px;
+        width: 100%;
+        background: #2c2c2c81;
+        box-shadow: 0 0 6px #66666691;
+        border-radius: 5px;
+        z-index: 2;
+
+        h4 {
+            color: #adadad;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #adadad;
+        }
+        .map {
+            margin-top: 10px;
+        }
+
+        
+    }
+}

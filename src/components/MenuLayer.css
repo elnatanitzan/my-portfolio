@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&family=Rubik:wght@300;400;600&display=swap");
+html,
+body {
+  height: 100vw;
+  padding: 0;
+  margin: 0;
+  background: #141414;
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #494949;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .wrapper {
+  height: 100%;
+  padding: 0 65px;
+}
+
+@media (max-width: 650px) {
+  .container .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.container .wrapper .home {
+  height: 100%;
+  width: 100%;
+}
+
+.container .wrapper .home p {
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+header {
+  position: relative;
+  height: 80px;
+}
+
+header .inner-header {
+  background: #20202060;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  -webkit-box-shadow: 10px 0 5px #3838387e;
+          box-shadow: 10px 0 5px #3838387e;
+  overflow: hidden;
+  position: absolute;
+  padding: 0 65px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 650px) {
+  header .inner-header {
+    padding: 0 25px;
+  }
+}
+
+header .hamburger-menu {
+  display: none;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+header .hamburger-menu .menu-secondary-background-color {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+header .hamburger-menu .menu-layer {
+  position: relative;
+  background: #000000e3;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+header .hamburger-menu .menu-layer .menu-image-background {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-animation-name: backgroundEffect;
+          animation-name: backgroundEffect;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+header .hamburger-menu .menu-layer .wrapper {
+  position: relative;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 150px;
+}
+
+@media screen and (max-width: 800px) {
+  header .hamburger-menu .menu-layer .wrapper .menu-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav {
+  display: block;
+  width: 100%;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li {
+  list-style: none;
+  font-size: 3rem;
+  font-weight: 500;
+  cursor: pointer;
+  height: 100px;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li:hover {
+  border-radius: 8px;
+  background: rgba(26, 26, 26, 0.384);
+}
+
+header .hamburger-menu .menu-layer .wrapper .menu-links nav ul li:hover a {
+  color: #fcc653;
+}
+
+header .hamburger-menu .menu-layer .wrapper .projects {
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  bottom: 25px;
+  color: #fcc653;
+  margin-top: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  gap: auto;
+}
+
+@media (max-width: 1025px) {
+  header .hamburger-menu .menu-layer .wrapper .projects {
+    width: 30px;
+    height: 100%;
+    top: 25px;
+    right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    gap: 0;
+  }
+  header .hamburger-menu .menu-layer .wrapper .projects span {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+header .hamburger-menu .menu-layer .wrapper .projects .menu-images {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  padding: 8px 14px;
+}
+
+@media (max-width: 1025px) {
+  header .hamburger-menu .menu-layer .wrapper .projects .menu-images {
+    padding: 6px 10px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-size: 9px;
+  }
+}
+
+header .hamburger-menu .menu-layer .wrapper .projects .menu-images:hover {
+  color: #fff;
+  background: #19191996;
+}
+
+@-webkit-keyframes backgroundEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 10%;
+  }
+  50% {
+    background-position: 0 10%;
+  }
+  75% {
+    background-position: 10% 40%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes backgroundEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 10%;
+  }
+  50% {
+    background-position: 0 10%;
+  }
+  75% {
+    background-position: 10% 40%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+/*# sourceMappingURL=MenuLayer.css.map */

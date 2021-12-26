@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import  { withRouter, Link } from "react-router-dom";
-import Hamb from "./Hamb";
+import MenuLayer from "./MenuLayer";
 import { ReactComponent as HomeIcon } from "../Assets/home.svg";
 import { ReactComponent as MenuAnimatedIcon } from '../Assets/menu.svg';
-import '../Assets/MenuIcon.css';
+import '../Assets/SvgIcons.css';
+import './MenuLayer.css';
 
 const Header = ({ history }) => {
 
@@ -30,7 +31,7 @@ const Header = ({ history }) => {
         setDisabled(!disabled);
         setTimeout(() => {
             setDisabled(false);
-        }, 900);
+        }, 1000);
     };
  
     return (
@@ -46,7 +47,7 @@ const Header = ({ history }) => {
                         <MenuAnimatedIcon className={ clicked ? 'active' : '' } />
                     </div>
                 </div>
-            <Hamb initial={initial} clicked={clicked} />
+            <MenuLayer initial={initial} clicked={clicked} />
         </header>
     );
 };
