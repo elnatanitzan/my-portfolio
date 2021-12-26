@@ -1,13 +1,13 @@
 @import '../App.scss';
 .Carousel {
     width: 80%;
-    height: 100vh;
     margin: 0 auto;
-    transform: translateY(-7%);
     overflow: hidden;
     position: relative;
     @media (max-width: 380px) {
-        width: 130%;
+        transform: translateY(40%);
+        height: 100vw;
+        width: 180%;
     }
 
     #github, #open, #codepen, #facebook {
