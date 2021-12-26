@@ -22,11 +22,14 @@ const Card = styled.div`
     &:hover {
         transform: scale(102%);
     }
+    @media (max-width: 380px) {
+            width: 330px;
+    }
 `;
 
 const CardImg = styled.div`
 @media (max-width: 380px) {
-        width: 310px;
+        width: 330px;
 }
 `;
 
