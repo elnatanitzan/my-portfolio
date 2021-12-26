@@ -1,8 +1,8 @@
 @import '../App.scss';
 .Carousel {
     width: 80%;
+    height: 100vh;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
     @media (max-width: 380px) {
         transform: translateY(40%);
