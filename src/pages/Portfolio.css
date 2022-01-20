@@ -66,12 +66,12 @@ a:hover {
 
 .Carousel {
   width: 80%;
+  overflow: hidden;
   height: 100vh;
-  margin: 0 auto;
   -webkit-transform: translateY(-7%);
           transform: translateY(-7%);
-  overflow: hidden;
   position: relative;
+  margin: 0 auto;
 }
 
 @media (max-width: 380px) {

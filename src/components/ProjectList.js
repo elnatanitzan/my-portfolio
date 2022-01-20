@@ -9,6 +9,7 @@ import Todos3MethodsReact from "../project-photos/Todos-3-Methods-React.png";
 import TooltipUI from "../project-photos/TooltipUI-mini-Library.png";
 import SetButtonsSASS from "../project-photos/set-Buttons-use-SASS-@mixin.png";
 import RenanaNitzanStore from "../project-photos/renana-nitzan-store.png";
+import AngularTodos from "../project-photos/Angular-Todos.png";
 
 export const Cards = [
         {
@@ -34,6 +35,14 @@ export const Cards = [
             githubLink: "https://github.com/elnatanitzan/API-explorer",
             codepenLink: "",
             demoLink: "https://elnatanitzan.github.io/API-explorer/"
+        },
+        {
+            src: AngularTodos, 
+            title: "Angular Todos",
+            details: "ToDo app using Angular EventEmitter, Output & Input.",
+            githubLink: "https://github.com/elnatanitzan/Todo-s-Angular",
+            codepenLink: "",
+            demoLink: "https://todos-angular-elnatanitzan.vercel.app/"
         },
         {
             src: FindTheNumber,
